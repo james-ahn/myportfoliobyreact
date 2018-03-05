@@ -1,0 +1,11 @@
+@import 'utils';
+
+body {
+  margin: 0;
+  background: $oc-gray-8; //open-color 에 등록된 색상 변수
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}

@@ -31,4 +31,10 @@ npm install axios classnames sass-loader node-sass include-media open-color bett
 
 - config/paths.js - styles path 추가 
 
+# open-color 에 등록된 색상 변수
+- guide : https://yeun.github.io/open-color/
+- $oc-[색상]-[명암]
 
+
+
+ 
