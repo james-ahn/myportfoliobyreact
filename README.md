@@ -36,5 +36,10 @@ npm install axios classnames sass-loader node-sass include-media open-color bett
 - $oc-[색상]-[명암]
 
 
+# easy to use for Promise ( async/await )
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function
+
+
+
 
  
