@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {isMobile} from 'react-device-detect';
 import ViewerTemplate from './components/ViewerTemplate';
-import Content from './components/Content';
 import Header from './components/Header';
+import Content from './components/Content';
+import Content2 from './components/Content2';
 import Footer from './components/Footer';
 
 import * as api from './lib/api';
@@ -82,6 +83,7 @@ class App extends Component {
                     collapsed = {this.state.collapsed}
                 />
                 <Content/>
+                <Content2/>
                 <Footer/>
             </div>
 

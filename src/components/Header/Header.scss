@@ -3,6 +3,8 @@
 .header-template {
   text-align: center;
   background: $oc-gray-9;
+  position: fixed;
+  width: 100%;
 
   a { color:#999 !important;}
   .header-toggleNavbar { background-color:#999 !important;}
