@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import {isMobile} from 'react-device-detect';
 import ViewerTemplate from './components/ViewerTemplate';
-import SpaceNavigator from './components/SpaceNavigator';
-import Viewer from './components/Viewer';
+import Content from './components/Content';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 import * as api from './lib/api';
 
 class App extends Component {
-    state = {
-        loading: false,
-        maxDate: null,
-        date: null,
-        url: 'testUrl',
-        mediaType: null
+
+    constructor(props) {
+        super(props);
+        this.toggleNavbar = this.toggleNavbar.bind(this);
+        this.state = {
+            collapsed: true
+        };
     }
 
     // getAPOD = (date) => {
@@ -62,21 +65,41 @@ class App extends Component {
         // });
     }
 
-
+    toggleNavbar() {
+        this.setState({
+            collapsed: !this.state.collapsed
+        });
+    }
 
     render() {
-        const{ url, mediaType, loading } = this.state;
+        //const{ url, mediaType, loading} = this.state;
 
         return (
-            <ViewerTemplate
-              spaceNavigator={<SpaceNavigator/>}
-              viewer={(
-                  <Viewer
-                      url="https://www.youtube.com/embed/uj3Lq7Gu94Y?rel=0"
-                      mediaType="video"/>
-              )}
-              url={url}
-            />
+            <div>
+                <Header
+                    isMobile = {isMobile}
+                    toggleNavbar = {this.toggleNavbar}
+                    collapsed = {this.state.collapsed}
+                />
+                <Content/>
+                <Footer/>
+            </div>
+
+
+
+            // <ViewerTemplate
+            //     menu={(
+            //         <Header
+            //             isOpen = {this.state.isOpen}
+            //             toggle = {this.toggle}
+            //         />
+            //     )}
+            //     viewer={(
+            //       <Content
+            //           url="https://www.youtube.com/embed/uj3Lq7Gu94Y?rel=0"
+            //           mediaType="video"/>
+            //     )}
+            // />
         );
     }
 }

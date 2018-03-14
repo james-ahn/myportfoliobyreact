@@ -1,0 +1,9 @@
+@import 'utils';
+
+.header-template {
+  background: $oc-gray-9;
+
+  a { color:#999 !important;}
+  .header-toggleNavbar { background-color:#999 !important;}
+  .hidden { display:none; }
+}
