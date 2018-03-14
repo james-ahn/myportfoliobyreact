@@ -22,7 +22,7 @@ const Header = ({isMobile, toggleNavbar, collapsed}) => {
 
         <div className={cx('header-template')}>
             {/*web*/}
-            <Navbar color="faded" light expand="md" className={isMobile ? cx('hidden'):''}>
+            <Navbar color="faded" light expand="md" className={cx('hidden-web')}>
                 <NavbarBrand href="/">James Ahn</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
@@ -38,7 +38,7 @@ const Header = ({isMobile, toggleNavbar, collapsed}) => {
             </Navbar>
 
             {/*mobile*/}
-            <Navbar color="faded" light className={isMobile ? '':cx('hidden')}>
+            <Navbar color="faded" light className={cx('hidden-mobile')}>
                 <NavbarBrand href="/" className="mr-auto">James Ahn</NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} className="mr-2" className={cx('header-toggleNavbar')} />
                 <Collapse isOpen={!collapsed} navbar>

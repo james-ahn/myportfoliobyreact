@@ -1,18 +1,21 @@
 import React from 'react';
 import styles from './Content.scss';
 import classNames from 'classnames/bind';
-import { Alert } from 'reactstrap';
+import { Container,Row,Col  } from 'reactstrap';
+import main from '../../styles/img/main.mp4';
 
 const cx = classNames.bind(styles);
 
-const Content = ({mediaType, url}) => {
+const Content = ({}) => {
 
     return (
-        <div>
-            <Alert color="primary">
-                This is a primary alert — check it out!
-            </Alert>
-        </div>
+        <Container fluid={true}>
+            <Row className={cx('first-row')}>
+                <video autoPlay loop muted id="video-background">
+                    <source src = {main} type = "video/mp4"/>
+                </video>
+            </Row>
+        </Container>
     );
 };
 

@@ -1,9 +1,19 @@
 @import 'utils';
 
 .header-template {
+  text-align: center;
   background: $oc-gray-9;
 
   a { color:#999 !important;}
   .header-toggleNavbar { background-color:#999 !important;}
-  .hidden { display:none; }
+
+
+  .hidden-web { display:none;}
+  .hidden-mobile { display:flex;}
+
+  @media (min-width: 768px) {
+    .hidden-web { display:flex;}
+    .hidden-mobile { display:none;}
+  }
+
 }
