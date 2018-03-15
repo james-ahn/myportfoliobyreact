@@ -13,10 +13,26 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
             collapsed: true,
+            fadeIn: false,
+            toolTipJS: false,
+            toolTipVue: false,
+            toolTipVuetify: false,
+            toolTipHtml: false,
+            toolTipCss: false,
+            toolTipCordova: false,
+            toolTipGit: false
         };
+        this.toggleNavbar = this.toggleNavbar.bind(this);
+        this.toggle = this.toggle.bind(this);
+        this.setTooltipJS = this.setTooltipJS.bind(this);
+        this.setTooltipVue = this.setTooltipVue.bind(this);
+        this.setTooltipVuetify = this.setTooltipVuetify.bind(this);
+        this.setTooltipHtml = this.setTooltipHtml.bind(this);
+        this.setTooltipCss = this.setTooltipCss.bind(this);
+        this.setTooltipCordova = this.setTooltipCordova.bind(this);
+        this.setTooltipGit = this.setTooltipGit.bind(this);
     }
 
     // getAPOD = (date) => {
@@ -67,9 +83,53 @@ class App extends Component {
         // });
     }
 
+    /*Content*/
     toggleNavbar() {
         this.setState({
             collapsed: !this.state.collapsed
+        });
+    }
+
+    /*Content3*/
+    toggle() {
+        this.setState({
+            fadeIn: !this.state.fadeIn
+        });
+    }
+
+    setTooltipJS() {
+        this.setState({
+            toolTipJS: !this.state.toolTipJS,
+        });
+    }
+    setTooltipVue() {
+        this.setState({
+            toolTipVue: !this.state.toolTipVue,
+        });
+    }
+    setTooltipVuetify() {
+        this.setState({
+            toolTipVuetify: !this.state.toolTipVuetify,
+        });
+    }
+    setTooltipHtml() {
+        this.setState({
+            toolTipHtml: !this.state.toolTipHtml,
+        });
+    }
+    setTooltipCss() {
+        this.setState({
+            toolTipCss: !this.state.toolTipCss,
+        });
+    }
+    setTooltipCordova() {
+        this.setState({
+            toolTipCordova: !this.state.toolTipCordova,
+        });
+    }
+    setTooltipGit() {
+        this.setState({
+            toolTipGit: !this.state.toolTipGit,
         });
     }
 
@@ -84,7 +144,26 @@ class App extends Component {
                 />
                 <Content/>
                 <Content2/>
-                <Content3/>
+                <Content3
+                    toggle = {this.toggle}
+                    fadeIn = {this.state.fadeIn}
+                    setTooltipJS = {this.setTooltipJS}
+                    setTooltipVue = {this.setTooltipVue}
+                    setTooltipVuetify = {this.setTooltipVuetify}
+                    setTooltipHtml = {this.setTooltipHtml}
+                    setTooltipCss = {this.setTooltipCss}
+                    setTooltipCordova = {this.setTooltipCordova}
+                    setTooltipGit = {this.setTooltipGit}
+                    toolTipJS = {this.state.toolTipJS}
+                    toolTipVue = {this.state.toolTipVue}
+                    toolTipVue = {this.state.toolTipVue}
+                    toolTipVuetify = {this.state.toolTipVuetify}
+                    toolTipHtml = {this.state.toolTipHtml}
+                    toolTipCss = {this.state.toolTipCss}
+                    toolTipCordova = {this.state.toolTipCordova}
+                    toolTipGit = {this.state.toolTipGit}
+                />
+
                 <Footer/>
             </div>
 
