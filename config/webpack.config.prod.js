@@ -255,6 +255,28 @@ module.exports = {
                     }
                 ],
             },
+            {
+                test: /\.mp4$/,
+                use: [
+                    {
+                        loader: require.resolve('file-loader'),
+                        options: {
+                            name: 'static/media/[name].[hash:8].[ext]'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.mp4$/,
+                use: [
+                    {
+                        loader: require.resolve('url-loader'),
+                        options: {
+                            name: 'static/media/[name].[hash:8].[ext]'
+                        }
+                    }
+                ]
+            },
 
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.

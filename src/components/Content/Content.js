@@ -22,7 +22,7 @@ const Content = ({}) => {
                 <div className={cx('content-group')} >
                     <div className={cx('content-text')}>
                         <h1>James Ahn</h1>
-                        <p>I am a web developer.</p>
+                        <p>Web Application Developer</p>
                     </div>
                     <button className={cx('content-button')}>More</button>
                 </div>

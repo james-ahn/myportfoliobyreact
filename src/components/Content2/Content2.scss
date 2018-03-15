@@ -1,32 +1,99 @@
 @import 'utils';
 
-.second-row{
-  text-align: center;
-  background-image: url("../../styles/img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+// mobile size
+.contents2-row{
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 50px;
 
-  padding-top: 500px;
-  padding-bottom: 120px;
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 50px;
-  margin-bottom: 25px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  .contents2-head{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+  }
 
+  .contents2-subHead{
+    text-align: center;
+    padding-bottom: 80px;
+    font-size: medium;
+    color: #6c757d!important;
+    font-weight: bold;
+  }
+
+  img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+    height: 70px;
+    &:hover{
+      cursor:pointer;
+      transform:scale(1.2);
+      -o-transform:scale(1.2);
+      -moz-transform:scale(1.2);
+      -webkit-transform:scale(1.2);
+
+      transition: transform .35s;
+      -o-transition: transform .35s;
+      -moz-transition: transform .35s;
+      -webkit-transition: transform .35s;
+    }
+  }
+  p{
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    color: #6c757d!important;
+  }
+
+  //web size
   @media (min-width: 768px) {
-    padding-top: 500px;
-    padding-bottom: 200px;
-    font-size: 75px;
-    font-weight: 700;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 18px;
     line-height: 75px;
-    margin-bottom: 50px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    .contents2-head{
+      text-align: center;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .contents2-subHead{
+      text-align: center;
+      padding-bottom: 80px;
+      font-size: medium;
+      color: #6c757d!important;
+      font-weight: bold;
+    }
+
+    img{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80px;
+      height: 80px;
+
+      &:hover{ /* img 마우스 오버시*/
+        cursor:pointer;
+        transform:scale(1.5); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+        -o-transform:scale(1.5);
+        -moz-transform:scale(1.5);
+        -webkit-transform:scale(1.5);
+
+        transition: transform .35s;
+        -o-transition: transform .35s;
+        -moz-transition: transform .35s;
+        -webkit-transition: transform .35s;
+        /* 마우스 오버시 이미지가 즉시 커지지않고 30.5 second 의 시간에 걸쳐 커진다 애니메이션 효과*/
+      }
+    }
+
+    p{
+      text-align: center;
+      width: 80px;
+      height: 80px;
+      color: #6c757d!important;
+    }
+
   }
 
 }

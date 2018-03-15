@@ -1,0 +1,51 @@
+@import 'utils';
+
+// mobile size
+.contents3-row{
+  background-color: #ffd314;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  .contents2-head{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .contents2-subHead{
+    text-align: center;
+    padding-bottom: 80px;
+    font-size: medium;
+    color: #6c757d!important;
+    font-weight: bold;
+  }
+
+
+
+  //web size
+  @media (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 75px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    .contents2-head{
+      text-align: center;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .contents2-subHead{
+      text-align: center;
+      padding-bottom: 80px;
+      font-size: medium;
+      color: #6c757d!important;
+      font-weight: bold;
+    }
+
+
+
+  }
+
+}
+

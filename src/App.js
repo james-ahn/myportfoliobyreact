@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import {isMobile} from 'react-device-detect';
+
 import ViewerTemplate from './components/ViewerTemplate';
 import Header from './components/Header';
 import Content from './components/Content';
 import Content2 from './components/Content2';
+import Content3 from './components/Content3';
 import Footer from './components/Footer';
 
 import * as api from './lib/api';
@@ -14,7 +15,7 @@ class App extends Component {
         super(props);
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
-            collapsed: true
+            collapsed: true,
         };
     }
 
@@ -78,15 +79,14 @@ class App extends Component {
         return (
             <div>
                 <Header
-                    isMobile = {isMobile}
                     toggleNavbar = {this.toggleNavbar}
                     collapsed = {this.state.collapsed}
                 />
                 <Content/>
                 <Content2/>
+                <Content3/>
                 <Footer/>
             </div>
-
 
 
             // <ViewerTemplate

@@ -50,4 +50,7 @@ npm install --save reactstrap@next
 npm install react-device-detect --save
 ````
 
- 
+# add react-scroll
+```
+npm install react-scroll
+``` 

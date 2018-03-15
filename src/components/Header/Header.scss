@@ -5,12 +5,16 @@
   background: $oc-gray-9;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
-  a { color:#999 !important;}
+  a { color:#999 !important; cursor:pointer}
   .header-toggleNavbar { background-color:#999 !important;}
 
 
-  .hidden-web { display:none;}
+  .hidden-web {
+    display:none;
+
+  }
   .hidden-mobile { display:flex;}
 
   @media (min-width: 768px) {
