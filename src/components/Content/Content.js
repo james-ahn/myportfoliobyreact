@@ -24,7 +24,6 @@ const Content = ({}) => {
                         <h1>James Ahn</h1>
                         <p>Web Application Developer</p>
                     </div>
-                    <button className={cx('content-button')}>More</button>
                 </div>
             </Row>
         </Container>

@@ -5,7 +5,7 @@
   background: $oc-gray-9;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 10000;
 
   a { color:#999 !important; cursor:pointer}
   .header-toggleNavbar { background-color:#999 !important;}

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
-import ViewerTemplate from './components/ViewerTemplate';
 import Header from './components/Header';
 import Content from './components/Content';
 import Content2 from './components/Content2';
 import Content3 from './components/Content3';
-import Footer from './components/Footer';
+import Content4 from './components/Content4';
 
 import * as api from './lib/api';
 
@@ -15,17 +13,19 @@ class App extends Component {
         super(props);
         this.state = {
             collapsed: true,
-            fadeIn: false,
             toolTipJS: false,
             toolTipVue: false,
             toolTipVuetify: false,
             toolTipHtml: false,
             toolTipCss: false,
             toolTipCordova: false,
-            toolTipGit: false
+            toolTipGit: false,
+            showJoes:true,
+            showLG:false,
+            showKyung:false,
+            showFinger:false
         };
         this.toggleNavbar = this.toggleNavbar.bind(this);
-        this.toggle = this.toggle.bind(this);
         this.setTooltipJS = this.setTooltipJS.bind(this);
         this.setTooltipVue = this.setTooltipVue.bind(this);
         this.setTooltipVuetify = this.setTooltipVuetify.bind(this);
@@ -33,6 +33,10 @@ class App extends Component {
         this.setTooltipCss = this.setTooltipCss.bind(this);
         this.setTooltipCordova = this.setTooltipCordova.bind(this);
         this.setTooltipGit = this.setTooltipGit.bind(this);
+        this.setShowJoes = this.setShowJoes.bind(this);
+        this.setShowLG = this.setShowLG.bind(this);
+        this.setShowKyung = this.setShowKyung.bind(this);
+        this.setShowFinger = this.setShowFinger.bind(this);
     }
 
     // getAPOD = (date) => {
@@ -91,12 +95,6 @@ class App extends Component {
     }
 
     /*Content3*/
-    toggle() {
-        this.setState({
-            fadeIn: !this.state.fadeIn
-        });
-    }
-
     setTooltipJS() {
         this.setState({
             toolTipJS: !this.state.toolTipJS,
@@ -132,6 +130,39 @@ class App extends Component {
             toolTipGit: !this.state.toolTipGit,
         });
     }
+    setShowJoes() {
+        this.setState({
+            showJoes: true,
+            showLG: false,
+            showKyung:false,
+            showFinger:false
+        });
+    }
+    setShowLG() {
+        this.setState({
+            showJoes: false,
+            showLG: true,
+            showKyung:false,
+            showFinger:false
+        });
+    }
+    setShowKyung() {
+        this.setState({
+            showJoes: false,
+            showLG: false,
+            showKyung:true,
+            showFinger:false
+        });
+    }
+    setShowFinger() {
+        this.setState({
+            showJoes: false,
+            showLG: false,
+            showKyung:false,
+            showFinger:true
+        });
+    }
+
 
     render() {
         //const{ url, mediaType, loading} = this.state;
@@ -145,8 +176,6 @@ class App extends Component {
                 <Content/>
                 <Content2/>
                 <Content3
-                    toggle = {this.toggle}
-                    fadeIn = {this.state.fadeIn}
                     setTooltipJS = {this.setTooltipJS}
                     setTooltipVue = {this.setTooltipVue}
                     setTooltipVuetify = {this.setTooltipVuetify}
@@ -154,33 +183,26 @@ class App extends Component {
                     setTooltipCss = {this.setTooltipCss}
                     setTooltipCordova = {this.setTooltipCordova}
                     setTooltipGit = {this.setTooltipGit}
+                    setShowJoes = {this.setShowJoes}
+                    setShowLG = {this.setShowLG}
+                    setShowKyung = {this.setShowKyung}
+                    setShowFinger = {this.setShowFinger}
                     toolTipJS = {this.state.toolTipJS}
-                    toolTipVue = {this.state.toolTipVue}
                     toolTipVue = {this.state.toolTipVue}
                     toolTipVuetify = {this.state.toolTipVuetify}
                     toolTipHtml = {this.state.toolTipHtml}
                     toolTipCss = {this.state.toolTipCss}
                     toolTipCordova = {this.state.toolTipCordova}
                     toolTipGit = {this.state.toolTipGit}
+                    showJoes = {this.state.showJoes}
+                    showLG = {this.state.showLG}
+                    showKyung = {this.state.showKyung}
+                    showFinger = {this.state.showFinger}
                 />
 
-                <Footer/>
+                <Content4/>
             </div>
 
-
-            // <ViewerTemplate
-            //     menu={(
-            //         <Header
-            //             isOpen = {this.state.isOpen}
-            //             toggle = {this.toggle}
-            //         />
-            //     )}
-            //     viewer={(
-            //       <Content
-            //           url="https://www.youtube.com/embed/uj3Lq7Gu94Y?rel=0"
-            //           mediaType="video"/>
-            //     )}
-            // />
         );
     }
 }

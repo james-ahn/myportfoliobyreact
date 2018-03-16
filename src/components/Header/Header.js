@@ -22,7 +22,7 @@ const Header = ({toggleNavbar, collapsed}) => {
         <div className={cx('header-template')}>
             {/*web*/}
             <Navbar color="faded" light expand="md" className={cx('hidden-web')}>
-                <NavbarBrand>James Ahn</NavbarBrand>
+                <NavbarBrand href="/">James Ahn</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
                         <NavLink href="#skills">SKILLS</NavLink>
@@ -31,25 +31,25 @@ const Header = ({toggleNavbar, collapsed}) => {
                         <NavLink href="#about">ABOUT</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="">CONTACT</NavLink>
+                        <NavLink href="#contact">CONTACT</NavLink>
                     </NavItem>
                 </Nav>
             </Navbar>
 
             {/*mobile*/}
             <Navbar color="faded" light className={cx('hidden-mobile')}>
-                <NavbarBrand>James Ahn</NavbarBrand>
+                <NavbarBrand href="/">James Ahn</NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} className="mr-2" className={cx('header-toggleNavbar')} />
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink href="">ABOUT</NavLink>
+                            <NavLink href="#skills">SKILLS</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="">CAREER</NavLink>
+                            <NavLink href="#about">ABOUT</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="">CONTACT</NavLink>
+                            <NavLink href="#contact">CONTACT</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
