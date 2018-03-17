@@ -22,7 +22,9 @@ const Header = ({toggleNavbar, collapsed,Scroll}) => {
         <div className={cx('header-template')}>
             {/*web*/}
             <Navbar color="faded" light expand="md" className={cx('hidden-web')}>
-                <NavbarBrand href="/">James Ahn</NavbarBrand>
+                <Scroll type="id" element="home" offset={-50}>
+                    <NavbarBrand>James Ahn</NavbarBrand>
+                </Scroll>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
                         <Scroll type="id" element="skills" offset={-50}>

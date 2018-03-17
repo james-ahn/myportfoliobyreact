@@ -14,7 +14,7 @@ const cx = classNames.bind(styles);
 const Content = ({Scroll}) => {
 
     return (
-        <Container fluid={true}>
+        <Container fluid={true} id="home">
             <Row className={cx('content-row')}>
                 <video autoPlay loop muted className={cx('video-background')}>
                     <source src = {main} type = "video/mp4"/>
