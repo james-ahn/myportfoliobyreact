@@ -6,6 +6,9 @@ import Content3 from './components/Content3';
 import Content4 from './components/Content4';
 
 import * as api from './lib/api';
+import Scroll from 'react-scroll-to-element';
+
+
 
 class App extends Component {
 
@@ -24,6 +27,7 @@ class App extends Component {
             showLG:false,
             showKyung:false,
             showFinger:false
+
         };
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.setTooltipJS = this.setTooltipJS.bind(this);
@@ -37,6 +41,8 @@ class App extends Component {
         this.setShowLG = this.setShowLG.bind(this);
         this.setShowKyung = this.setShowKyung.bind(this);
         this.setShowFinger = this.setShowFinger.bind(this);
+
+
     }
 
     // getAPOD = (date) => {
@@ -164,6 +170,7 @@ class App extends Component {
     }
 
 
+
     render() {
         //const{ url, mediaType, loading} = this.state;
 
@@ -172,8 +179,11 @@ class App extends Component {
                 <Header
                     toggleNavbar = {this.toggleNavbar}
                     collapsed = {this.state.collapsed}
+                    Scroll = {Scroll}
                 />
-                <Content/>
+                <Content
+                    Scroll = {Scroll}
+                />
                 <Content2/>
                 <Content3
                     setTooltipJS = {this.setTooltipJS}

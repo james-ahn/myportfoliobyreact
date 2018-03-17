@@ -20,13 +20,12 @@ import vuetify from '../../styles/img/vuetify.png';
 import {
     Container,
     Row,
-    Media,
     Col
 } from 'reactstrap';
 
 const cx = classNames.bind(styles);
 
-const Content2 = ({}) => {
+const Content2 = ({scroll}) => {
 
     return (
             <Container fluid={true} id="skills" className={cx('contents2-row')}>

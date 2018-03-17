@@ -25,11 +25,8 @@ import vuetify from '../../styles/img/vuetify.png';
 
 //icons
 import MdBusiness from 'react-icons/lib/md/business';
-import MdLaptopMac from 'react-icons/lib/md/laptop-mac';
-import MdTagFaces from 'react-icons/lib/md/tag-faces';
-import MdPeople from 'react-icons/lib/md/people';
-import MdLocalCafe from 'react-icons/lib/md/local-cafe';
-
+import TiSocialLinkedinCircular from 'react-icons/lib/ti/social-linkedin-circular';
+import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular';
 
 
 import {
@@ -76,7 +73,8 @@ const Content3 = ({
                         <div className={cx('contents3-head')}> EXPERIENCE</div>
                     </Col>
                     <Col xs="5">
-                        <div className={cx('contents3-head-icons')}><MdLaptopMac style={{marginRight:'20px'}}/><MdTagFaces style={{marginRight:'20px'}}/><MdPeople style={{marginRight:'20px'}}/><MdLocalCafe/></div>
+                        <a href="https://github.com/james-ahn"><TiSocialGithubCircular className={cx('contents3-head-icons')}/></a>
+                        <a href="https://www.linkedin.com/in/james-ahn-70b95b93/"><TiSocialLinkedinCircular className={cx('contents3-head-icons')}/></a>
                     </Col>
                 </Row>
                 <Row>
@@ -84,16 +82,16 @@ const Content3 = ({
                         <div>
                             <ul className={cx('timeline')}>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowJoes} onMouseOut={setShowJoes} src={joes} />
+                                    <img className={cx('timeline-image')} onMouseOver={setShowJoes} onMouseOut={setShowJoes} src={joes} alt={''} />
                                 </li>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowLG} onMouseOut={setShowLG} src={lg} />
+                                    <img className={cx('timeline-image')} onMouseOver={setShowLG} onMouseOut={setShowLG} src={lg} alt={''}/>
                                 </li>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowKyung} onMouseOut={setShowKyung} src={bank} />
+                                    <img className={cx('timeline-image')} onMouseOver={setShowKyung} onMouseOut={setShowKyung} src={bank} alt={''} />
                                 </li>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowFinger} onMouseOut={setShowFinger} src={finger} />
+                                    <img className={cx('timeline-image')} onMouseOver={setShowFinger} onMouseOut={setShowFinger} src={finger} alt={''} />
                                 </li>
                             </ul>
                         </div>
@@ -108,13 +106,13 @@ const Content3 = ({
                                 <hr/>
                                 <h5>Developing the 6Joe's fantasy sports gaming platform for amateur Golf players and enthusiasts.</h5>
                                 <div style={{marginTop: '34px'}}>
-                                <img className={cx('skill-image')} src={js} id="toolTipJS"/>
-                                <img className={cx('skill-image')} src={vue} id="toolTipVue"/>
-                                <img className={cx('skill-image')} src={vuetify} id="toolTipVuetify"/>
-                                <img className={cx('skill-image')} src={html} id="toolTipHtml"/>
-                                <img className={cx('skill-image')} src={css} id="toolTipCss"/>
-                                <img className={cx('skill-image')} src={cordova} id="toolTipCordova"/>
-                                <img className={cx('skill-image')} src={git} id="toolTipGit"/>
+                                <img className={cx('skill-image')} src={js} id="toolTipJS" alt={''}/>
+                                <img className={cx('skill-image')} src={vue} id="toolTipVue" alt={''}/>
+                                <img className={cx('skill-image')} src={vuetify} id="toolTipVuetify" alt={''}/>
+                                <img className={cx('skill-image')} src={html} id="toolTipHtml" alt={''}/>
+                                <img className={cx('skill-image')} src={css} id="toolTipCss" alt={''}/>
+                                <img className={cx('skill-image')} src={cordova} id="toolTipCordova" alt={''}/>
+                                <img className={cx('skill-image')} src={git} id="toolTipGit" alt={''}/>
                                 </div>
                             </Jumbotron>
 
@@ -135,12 +133,12 @@ const Content3 = ({
                                 <hr/>
                                 <h5>Developed and evolved the LG Smart Thinq hybrid mobile application. Specifically responsible for features that allowed controlling of a robot cleaner via the application.</h5>
                                 <div style={{marginTop: '34px'}}>
-                                    <img className={cx('skill-image')} src={js} id="toolTipJS_LG"/>
-                                    <img className={cx('skill-image')} src={angular} id="toolTipVue_LG"/>
-                                    <img className={cx('skill-image')} src={html} id="toolTipHtml_LG"/>
-                                    <img className={cx('skill-image')} src={css} id="toolTipCss_LG"/>
-                                    <img className={cx('skill-image')} src={cordova} id="toolTipCordova_LG"/>
-                                    <img className={cx('skill-image')} src={node} id="toolTipNode_LG"/>
+                                    <img className={cx('skill-image')} src={js} id="toolTipJS_LG" alt={''}/>
+                                    <img className={cx('skill-image')} src={angular} id="toolTipVue_LG" alt={''}/>
+                                    <img className={cx('skill-image')} src={html} id="toolTipHtml_LG" alt={''}/>
+                                    <img className={cx('skill-image')} src={css} id="toolTipCss_LG" alt={''}/>
+                                    <img className={cx('skill-image')} src={cordova} id="toolTipCordova_LG" alt={''}/>
+                                    <img className={cx('skill-image')} src={node} id="toolTipNode_LG" alt={''}/>
 
                                 </div>
                             </Jumbotron>
@@ -161,10 +159,10 @@ const Content3 = ({
                                 <hr/>
                                 <h5>Developed and evolved an Internet banking system for the Kyongnam Bank.</h5>
                                 <div style={{marginTop: '34px'}}>
-                                    <img className={cx('skill-image')} src={java} id="toolTipVue_Kyung"/>
-                                    <img className={cx('skill-image')} src={js} id="toolTipJS_Kyung"/>
-                                    <img className={cx('skill-image')} src={html} id="toolTipHtml_Kyung"/>
-                                    <img className={cx('skill-image')} src={css} id="toolTipCss_Kyung"/>
+                                    <img className={cx('skill-image')} src={java} id="toolTipVue_Kyung" alt={''}/>
+                                    <img className={cx('skill-image')} src={js} id="toolTipJS_Kyung" alt={''}/>
+                                    <img className={cx('skill-image')} src={html} id="toolTipHtml_Kyung" alt={''}/>
+                                    <img className={cx('skill-image')} src={css} id="toolTipCss_Kyung" alt={''}/>
 
                                 </div>
                             </Jumbotron>
@@ -185,11 +183,11 @@ const Content3 = ({
                                 <h5>- A mobile-first approached website for the ShinHan Bank</h5>
 
                                 <div style={{marginTop: '34px'}}>
-                                    <img className={cx('skill-image')} src={java} id="toolTipVue_Finger"/>
-                                    <img className={cx('skill-image')} src={js} id="toolTipJS_Finger"/>
-                                    <img className={cx('skill-image')} src={jquery} id="toolTipJquery_Finger"/>
-                                    <img className={cx('skill-image')} src={html} id="toolTipHtml_Finger"/>
-                                    <img className={cx('skill-image')} src={css} id="toolTipCss_Finger"/>
+                                    <img className={cx('skill-image')} src={java} id="toolTipVue_Finger" alt={''}/>
+                                    <img className={cx('skill-image')} src={js} id="toolTipJS_Finger" alt={''}/>
+                                    <img className={cx('skill-image')} src={jquery} id="toolTipJquery_Finger" alt={''}/>
+                                    <img className={cx('skill-image')} src={html} id="toolTipHtml_Finger" alt={''}/>
+                                    <img className={cx('skill-image')} src={css} id="toolTipCss_Finger" alt={''}/>
                                 </div>
                             </Jumbotron>
                             <Tooltip placement="bottom" isOpen={toolTipVue} target="toolTipVue_Finger" toggle={setTooltipVue}>Java</Tooltip>

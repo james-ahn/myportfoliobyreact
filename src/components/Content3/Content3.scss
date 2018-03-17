@@ -116,10 +116,25 @@
     }
 
     .contents3-head-icons{
-      font-size: 50px;
-      font-weight: bold;
-      text-align: right;
+      width: 60px;
+      height: 60px;
+      color: black;
+      float: right;
       display: block;
+      &:hover{
+        color: darkorange;
+        cursor:pointer;
+        transform:scale(1.3); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+        -o-transform:scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+
+        transition: transform .35s;
+        -o-transition: transform .35s;
+        -moz-transition: transform .35s;
+        -webkit-transition: transform .35s;
+        /* 마우스 오버시 이미지가 즉시 커지지않고 30.5 second 의 시간에 걸쳐 커진다 애니메이션 효과*/
+      }
     }
 
     .timeline {

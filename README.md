@@ -52,7 +52,7 @@ npm install react-device-detect --save
 
 # add react-scroll
 ```
-npm install react-scroll
+npm install react-scroll-to-element 
 ```
 # use react icons
 http://gorangajic.github.io/react-icons/md.html

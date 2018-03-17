@@ -15,7 +15,7 @@ import {
 const cx = classNames.bind(styles);
 
 
-const Header = ({toggleNavbar, collapsed}) => {
+const Header = ({toggleNavbar, collapsed,Scroll}) => {
 
     return (
 
@@ -25,13 +25,19 @@ const Header = ({toggleNavbar, collapsed}) => {
                 <NavbarBrand href="/">James Ahn</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink href="#skills">SKILLS</NavLink>
+                        <Scroll type="id" element="skills" offset={-50}>
+                            <NavLink>SKILLS</NavLink>
+                        </Scroll>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#about">ABOUT</NavLink>
+                        <Scroll type="id" element="about" offset={-50}>
+                            <NavLink>ABOUT</NavLink>
+                        </Scroll>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#contact">CONTACT</NavLink>
+                        <Scroll type="id" element="contact" offset={-50}>
+                            <NavLink>CONTACT</NavLink>
+                        </Scroll>
                     </NavItem>
                 </Nav>
             </Navbar>
@@ -43,13 +49,19 @@ const Header = ({toggleNavbar, collapsed}) => {
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink href="#skills">SKILLS</NavLink>
+                            <Scroll type="id" element="skills" offset={-50}>
+                                <NavLink>SKILLS</NavLink>
+                            </Scroll>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#about">ABOUT</NavLink>
+                            <Scroll type="id" element="about" offset={-50}>
+                                <NavLink>ABOUT</NavLink>
+                            </Scroll>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#contact">CONTACT</NavLink>
+                            <Scroll type="id" element="contact" offset={-50}>
+                                <NavLink>CONTACT</NavLink>
+                            </Scroll>
                         </NavItem>
                     </Nav>
                 </Collapse>

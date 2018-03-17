@@ -5,13 +5,13 @@ import main from '../../styles/img/main.mp4';
 
 import {
     Container,
-    Row,
+    Row
 } from 'reactstrap';
 
 
 const cx = classNames.bind(styles);
 
-const Content = ({}) => {
+const Content = ({Scroll}) => {
 
     return (
         <Container fluid={true}>
@@ -24,6 +24,10 @@ const Content = ({}) => {
                         <h1>James Ahn</h1>
                         <p>Web Application Developer</p>
                     </div>
+                    <Scroll type="id" element="skills" offset={-50}>
+                        <button className={cx('content-button')}>More</button>
+                    </Scroll>
+
                 </div>
             </Row>
         </Container>
