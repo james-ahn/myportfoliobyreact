@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Content.scss';
 import classNames from 'classnames/bind';
-import main from '../../styles/img/main.mp4';
+import main from '../../styles/img/main.ogv';
+import post from '../../styles/img/post.png';
 
 import {
     Container,
@@ -16,8 +17,8 @@ const Content = ({Scroll}) => {
     return (
         <Container fluid={true} id="home">
             <Row className={cx('content-row')}>
-                <video autoPlay loop muted className={cx('video-background')}>
-                    <source src = {main} type = "video/mp4"/>
+                <video autoPlay loop muted className={cx('video-background')} poster={post}>
+                    <source src = {main} type = "video/ogg"/>
                 </video>
                 <div className={cx('content-group')} >
                     <div className={cx('content-text')}>

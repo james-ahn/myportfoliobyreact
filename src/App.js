@@ -8,8 +8,6 @@ import Content4 from './components/Content4';
 import * as api from './lib/api';
 import Scroll from 'react-scroll-to-element';
 
-
-
 class App extends Component {
 
     constructor(props) {
@@ -41,8 +39,6 @@ class App extends Component {
         this.setShowLG = this.setShowLG.bind(this);
         this.setShowKyung = this.setShowKyung.bind(this);
         this.setShowFinger = this.setShowFinger.bind(this);
-
-
     }
 
     // getAPOD = (date) => {
