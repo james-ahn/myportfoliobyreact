@@ -4,7 +4,7 @@ developing my portfolio web site by react
 
 # create the project
 ````
-npm install -g create-react-app
+sudo npm install -g create-react-app
 create-react-app my-app
 
 - for customizing
