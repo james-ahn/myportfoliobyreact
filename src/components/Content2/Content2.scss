@@ -5,6 +5,7 @@
   background-color: white;
   padding-top: 100px;
   padding-bottom: 50px;
+  text-align: center;
 
   .contents2-head{
     text-align: center;
@@ -39,9 +40,6 @@
     }
   }
   p{
-    text-align: center;
-    width: 70px;
-    height: 70px;
     color: #6c757d!important;
   }
 
@@ -52,6 +50,7 @@
     font-size: 18px;
     line-height: 75px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
 
     .contents2-head{
       text-align: center;
@@ -85,13 +84,6 @@
         -webkit-transition: transform .35s;
         /* 마우스 오버시 이미지가 즉시 커지지않고 30.5 second 의 시간에 걸쳐 커진다 애니메이션 효과*/
       }
-    }
-
-    p{
-      text-align: center;
-      width: 80px;
-      height: 80px;
-      color: #6c757d!important;
     }
 
   }

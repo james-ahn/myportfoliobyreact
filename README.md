@@ -57,5 +57,22 @@ npm install react-scroll-to-element
 # use react icons
 http://gorangajic.github.io/react-icons/md.html
 
+#install the redux
 
+```
+npm install --save redux react-redux
+```
 
+## make the actions and reducers
+mkdir actions reducers && touch actions/index.js reducers/index.js
+
+````
+src
+├── actions
+│        └── index.js
+├── components
+│        
+├── index.js
+└── reducers
+    └── index.js
+````

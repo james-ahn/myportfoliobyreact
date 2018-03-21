@@ -1,6 +1,21 @@
 import React from 'react';
 import styles from './Content3.scss';
 import classNames from 'classnames/bind';
+import { connect } from 'react-redux';
+import {
+    toggleMobileMenu,
+    tooltipJs,
+    tooltipVue,
+    tooltipVuetify,
+    tooltipHtml,
+    tooltipCss,
+    tooltipCordova,
+    tooltipGit,
+    compnayJoes,
+    compnayLg,
+    compnayKyung,
+    compnayFinger
+} from '../../actions';
 
 // company logo
 import joes from '../../styles/img/6joes.png';
@@ -39,33 +54,15 @@ import {
 
 const cx = classNames.bind(styles);
 
-const Content3 = ({
-                      setTooltipJS,
-                      setTooltipVue,
-                      setTooltipVuetify,
-                      setTooltipHtml,
-                      setTooltipCss,
-                      setTooltipCordova,
-                      setTooltipGit,
-                      toolTipJS,
-                      toolTipVue,
-                      toolTipVuetify,
-                      toolTipHtml,
-                      toolTipCss,
-                      toolTipCordova,
-                      toolTipGit,
-                      setShowJoes,
-                      setShowLG,
-                      setShowKyung,
-                      setShowFinger,
-                      showJoes,
-                      showLG,
-                      showKyung,
-                      showFinger
 
-}) => {
+class Content3 extends React.Component {
 
-    return (
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
             <Container fluid={true} id="about" className={cx('contents3-row')}>
                 <Row>
                     <Col xs="3"><MdBusiness className={cx('contents3-head-left')} /></Col>
@@ -82,22 +79,22 @@ const Content3 = ({
                         <div>
                             <ul className={cx('timeline')}>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowJoes} onMouseOut={setShowJoes} src={joes} alt={''} />
+                                    <img className={cx('timeline-image')} onMouseOver={this.props.onCompnayJoes} onMouseOut={this.props.onCompnayJoes} src={joes} alt={''} />
                                 </li>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowLG} onMouseOut={setShowLG} src={lg} alt={''}/>
+                                    <img className={cx('timeline-image')} onMouseOver={this.props.onCompnayLg} onMouseOut={this.props.onCompnayLg} src={lg} alt={''}/>
                                 </li>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowKyung} onMouseOut={setShowKyung} src={bank} alt={''} />
+                                    <img className={cx('timeline-image')} onMouseOver={this.props.onCompnayKyung} onMouseOut={this.props.onCompnayKyung} src={bank} alt={''} />
                                 </li>
                                 <li>
-                                    <img className={cx('timeline-image')} onMouseOver={setShowFinger} onMouseOut={setShowFinger} src={finger} alt={''} />
+                                    <img className={cx('timeline-image')} onMouseOver={this.props.onCompnayFinger} onMouseOut={this.props.onCompnayFinger} src={finger} alt={''} />
                                 </li>
                             </ul>
                         </div>
                     </Col>
                     <Col xs="9">
-                        <div style={{display: showJoes ? 'block' : 'none' }}>
+                        <div style={{display: this.props.showJoes ? 'block' : 'none' }}>
                             <Jumbotron>
                                 <h1 className="display-5">Web Application Developer</h1>
                                 <h1 className="display-6">6Joe's Software Inc.</h1>
@@ -106,25 +103,25 @@ const Content3 = ({
                                 <hr/>
                                 <h5>Developing the 6Joe's fantasy sports gaming platform for amateur Golf players and enthusiasts.</h5>
                                 <div style={{marginTop: '34px'}}>
-                                <img className={cx('skill-image')} src={js} id="toolTipJS" alt={''}/>
-                                <img className={cx('skill-image')} src={vue} id="toolTipVue" alt={''}/>
-                                <img className={cx('skill-image')} src={vuetify} id="toolTipVuetify" alt={''}/>
-                                <img className={cx('skill-image')} src={html} id="toolTipHtml" alt={''}/>
-                                <img className={cx('skill-image')} src={css} id="toolTipCss" alt={''}/>
-                                <img className={cx('skill-image')} src={cordova} id="toolTipCordova" alt={''}/>
-                                <img className={cx('skill-image')} src={git} id="toolTipGit" alt={''}/>
+                                    <img className={cx('skill-image')} src={js} id="toolTipJS" alt={''}/>
+                                    <img className={cx('skill-image')} src={vue} id="toolTipVue" alt={''}/>
+                                    <img className={cx('skill-image')} src={vuetify} id="toolTipVuetify" alt={''}/>
+                                    <img className={cx('skill-image')} src={html} id="toolTipHtml" alt={''}/>
+                                    <img className={cx('skill-image')} src={css} id="toolTipCss" alt={''}/>
+                                    <img className={cx('skill-image')} src={cordova} id="toolTipCordova" alt={''}/>
+                                    <img className={cx('skill-image')} src={git} id="toolTipGit" alt={''}/>
                                 </div>
                             </Jumbotron>
 
-                            <Tooltip placement="bottom" isOpen={toolTipJS} target="toolTipJS" toggle={setTooltipJS}>JavaScript</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipVue} target="toolTipVue" toggle={setTooltipVue}>Vue JS</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipVuetify} target="toolTipVuetify" toggle={setTooltipVuetify}>Vuetify JS</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipHtml} target="toolTipHtml" toggle={setTooltipHtml}>HTML 5</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCss} target="toolTipCss" toggle={setTooltipCss}>CSS 3</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCordova} target="toolTipCordova" toggle={setTooltipCordova}>Cordova</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipGit} target="toolTipGit" toggle={setTooltipGit}>Git</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipJS} target="toolTipJS" toggle={this.props.onTooltipJs}>JavaScript</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipVue} target="toolTipVue" toggle={this.props.onTooltipVue}>Vue JS</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipVuetify} target="toolTipVuetify" toggle={this.props.onTooltipVuetify}>Vuetify JS</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipHtml} target="toolTipHtml" toggle={this.props.onTooltipHtml}>HTML 5</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCss} target="toolTipCss" toggle={this.props.onTooltipCss}>CSS 3</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCordova} target="toolTipCordova" toggle={this.props.onTooltipCordova}>Cordova</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipGit} target="toolTipGit" toggle={this.props.onTooltipGit}>Git</Tooltip>
                         </div>
-                        <div style={{display: showLG ? 'block' : 'none' }}>
+                        <div style={{display: this.props.showLG ? 'block' : 'none' }}>
                             <Jumbotron>
                                 <h1 className="display-5">Web Application Developer</h1>
                                 <h1 className="display-6">LG Electronics</h1>
@@ -143,14 +140,14 @@ const Content3 = ({
                                 </div>
                             </Jumbotron>
 
-                            <Tooltip placement="bottom" isOpen={toolTipJS} target="toolTipJS_LG" toggle={setTooltipJS}>JavaScript</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipVue} target="toolTipVue_LG" toggle={setTooltipVue}>Angular JS</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipHtml} target="toolTipHtml_LG" toggle={setTooltipHtml}>HTML 5</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCss} target="toolTipCss_LG" toggle={setTooltipCss}>CSS 3</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCordova} target="toolTipCordova_LG" toggle={setTooltipCordova}>Cordova</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipGit} target="toolTipNode_LG" toggle={setTooltipGit}>Node JS</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipJS} target="toolTipJS_LG" toggle={this.props.onTooltipJs}>JavaScript</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipVue} target="toolTipVue_LG" toggle={this.props.onTooltipVue}>Angular JS</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipHtml} target="toolTipHtml_LG" toggle={this.props.onTooltipHtml}>HTML 5</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCss} target="toolTipCss_LG" toggle={this.props.onTooltipCss}>CSS 3</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCordova} target="toolTipCordova_LG" toggle={this.props.onTooltipCordova}>Cordova</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipGit} target="toolTipNode_LG" toggle={this.props.onTooltipGit}>Node JS</Tooltip>
                         </div>
-                        <div style={{display: showKyung ? 'block' : 'none' }}>
+                        <div style={{display: this.props.showKyung ? 'block' : 'none' }}>
                             <Jumbotron>
                                 <h1 className="display-5">Web Developer</h1>
                                 <h1 className="display-6">Kyongnam Bank</h1>
@@ -166,12 +163,12 @@ const Content3 = ({
 
                                 </div>
                             </Jumbotron>
-                            <Tooltip placement="bottom" isOpen={toolTipVue} target="toolTipJS_Kyung" toggle={setTooltipVue}>Java</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipJS} target="toolTipVue_Kyung" toggle={setTooltipJS}>JavaScript</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipHtml} target="toolTipHtml_Kyung" toggle={setTooltipHtml}>HTML 5</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCss} target="toolTipCss_Kyung" toggle={setTooltipCss}>CSS 3</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipVue} target="toolTipVue_Kyung" toggle={this.props.onTooltipVue}>Java</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipJS} target="toolTipJS_Kyung" toggle={this.props.onTooltipJs}>JavaScript</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipHtml} target="toolTipHtml_Kyung" toggle={this.props.onTooltipHtml}>HTML 5</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCss} target="toolTipCss_Kyung" toggle={this.props.onTooltipCss}>CSS 3</Tooltip>
                         </div>
-                        <div style={{display: showFinger ? 'block' : 'none' }}>
+                        <div style={{display: this.props.showFinger ? 'block' : 'none' }}>
                             <Jumbotron>
                                 <h1 className="display-5">Web Developer</h1>
                                 <h1 className="display-6">Finger Inc</h1>
@@ -190,17 +187,56 @@ const Content3 = ({
                                     <img className={cx('skill-image')} src={css} id="toolTipCss_Finger" alt={''}/>
                                 </div>
                             </Jumbotron>
-                            <Tooltip placement="bottom" isOpen={toolTipVue} target="toolTipVue_Finger" toggle={setTooltipVue}>Java</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipJS} target="toolTipJS_Finger" toggle={setTooltipJS}>JavaScript</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCordova} target="toolTipJquery_Finger" toggle={setTooltipCordova}>jQuery</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipHtml} target="toolTipHtml_Finger" toggle={setTooltipHtml}>HTML 5</Tooltip>
-                            <Tooltip placement="bottom" isOpen={toolTipCss} target="toolTipCss_Finger" toggle={setTooltipCss}>CSS 3</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipVue} target="toolTipVue_Finger" toggle={this.props.onTooltipVue}>Java</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipJS} target="toolTipJS_Finger" toggle={this.props.onTooltipJs}>JavaScript</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCordova} target="toolTipJquery_Finger" toggle={this.props.onTooltipCordova}>jQuery</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipHtml} target="toolTipHtml_Finger" toggle={this.props.onTooltipHtml}>HTML 5</Tooltip>
+                            <Tooltip placement="bottom" isOpen={this.props.toolTipCss} target="toolTipCss_Finger" toggle={this.props.onTooltipCss}>CSS 3</Tooltip>
                         </div>
                     </Col>
                 </Row>
             </Container>
+        );
+    }
+}
 
-    );
-};
+let mapStateToProps = (state) => {
+
+    return {
+        toolTipJS: state.content3.toolTipJS,
+        toolTipVue: state.content3.toolTipVue,
+        toolTipVuetify: state.content3.toolTipVuetify,
+        toolTipHtml: state.content3.toolTipHtml,
+        toolTipCss: state.content3.toolTipCss,
+        toolTipCordova: state.content3.toolTipCordova,
+        toolTipGit: state.content3.toolTipGit,
+        showJoes:state.content3.showJoes,
+        showLG:state.content3.showLG,
+        showKyung:state.content3.showKyung,
+        showFinger:state.content3.showFinger
+    };
+
+}
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        onToggleMobileMenu: () => dispatch(toggleMobileMenu()),
+        onTooltipJs: () => dispatch(tooltipJs()),
+        onTooltipVue: () => dispatch(tooltipVue()),
+        onTooltipVuetify: () => dispatch(tooltipVuetify()),
+        onTooltipHtml: () => dispatch(tooltipHtml()),
+        onTooltipCss: () => dispatch(tooltipCss()),
+        onTooltipCordova: () => dispatch(tooltipCordova()),
+        onTooltipGit: () => dispatch(tooltipGit()),
+        onCompnayJoes: () => dispatch(compnayJoes()),
+        onCompnayLg: () => dispatch(compnayLg()),
+        onCompnayKyung: () => dispatch(compnayKyung()),
+        onCompnayFinger: () => dispatch(compnayFinger())
+    }
+}
+
+
+Content3 = connect(mapStateToProps,mapDispatchToProps)(Content3);
+
 
 export default Content3;

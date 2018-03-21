@@ -25,9 +25,14 @@ import {
 
 const cx = classNames.bind(styles);
 
-const Content2 = ({scroll}) => {
+class Content2 extends React.Component {
 
-    return (
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
             <Container fluid={true} id="skills" className={cx('contents2-row')}>
                 <Row>
                     <Col >
@@ -101,8 +106,8 @@ const Content2 = ({scroll}) => {
                     </Col>
                 </Row>
             </Container>
-
-    );
-};
+        );
+    }
+}
 
 export default Content2;

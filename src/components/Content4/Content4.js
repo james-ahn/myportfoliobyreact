@@ -14,9 +14,15 @@ import {
 
 const cx = classNames.bind(styles);
 
-const Content4 = ({}) => {
 
-    return (
+class Content4 extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
             <Container fluid={true} id="contact" className={cx('contents4-row')}>
                 <Row>
                     <Col>
@@ -45,8 +51,8 @@ const Content4 = ({}) => {
                     </Col>
                 </Row>
             </Container>
-
-    );
-};
+        );
+    }
+}
 
 export default Content4;

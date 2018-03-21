@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { createStore } from 'redux';
+import { Provider  } from 'react-redux';
 import './styles/base.scss';
 import 'bootstrap/dist/css/bootstrap.css';
+import portfolioApp from './reducers';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const store = createStore(portfolioApp);
+const appElement = document.getElementById('root');
+
+ReactDOM.render(
+    <Provider store = {store}>
+        <App />
+    </Provider>,
+    appElement
+);
